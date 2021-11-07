@@ -23,7 +23,7 @@ custom:
     indexDocument: index.html
     singlePageApp: true
     clientCommand: npm run build
-    noConfirm: false
+    noConfirm: true
     objectHeaders:
       index.html:
         - name: Cache-Control
