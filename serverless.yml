@@ -1,0 +1,30 @@
+service: angular-gitactions-test
+package:
+  exclude:
+    - "*.md"
+    - .serverless/**
+    - node_modules/**
+    - src/**
+    - dist/**
+
+plugins:
+  - fullstack-serverless
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+custom:
+  fullstack:
+    bucketName: site
+    priceClass: PriceClass_100
+    compressWebContent: true
+    distributionFolder: dist/angular-gitactions-test
+    indexDocument: index.html
+    singlePageApp: true
+    clientCommand: npm run build
+    noConfirm: false
+    objectHeaders:
+      index.html:
+        - name: Cache-Control
+          value: no-store, no-cache
