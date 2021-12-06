@@ -1,1 +1,1 @@
-console.log('this is another test webhook and again!')
+console.log('this is another test webhook')
